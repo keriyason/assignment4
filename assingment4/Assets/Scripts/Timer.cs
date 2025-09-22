@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class Timer : MonoBehaviour
 {
     public float timeRemaining = 60f; 
@@ -54,10 +55,12 @@ public class Timer : MonoBehaviour
     }
     public void RestartGame()
     {
+        Debug.Log("Restart button clicked!");
         SceneManager.LoadScene(2);
     }
     public void GotoMainMenu()
     {
+        Debug.Log("Main Menu button clicked!");
         SceneManager.LoadScene(0);
     }
 }

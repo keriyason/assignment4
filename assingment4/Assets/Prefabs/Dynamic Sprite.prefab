@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8486337077741011469}
   - component: {fileID: 4253110852376434326}
   - component: {fileID: 1398658111451388654}
+  - component: {fileID: 6135730151212420715}
   m_Layer: 0
   m_Name: Dynamic Sprite
   m_TagString: Untagged
@@ -136,6 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   jumpForce: 6
+  playerType: 0
+  catSprite: {fileID: 21300000, guid: 342ec4b27493404429fae513261bbbd3, type: 3}
+  dogSprite: {fileID: 21300000, guid: 2aa79d8ecbb98714b872b3c6f61698d1, type: 3}
   isGrounded: 1
 --- !u!50 &1398658111451388654
 Rigidbody2D:
@@ -164,3 +168,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6135730151212420715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492502981741489489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58dd77e5887a7543ae58a6e13aa2b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerType: 0
+  catSprite: {fileID: 21300000, guid: 342ec4b27493404429fae513261bbbd3, type: 3}
+  dogSprite: {fileID: 21300000, guid: 2aa79d8ecbb98714b872b3c6f61698d1, type: 3}
