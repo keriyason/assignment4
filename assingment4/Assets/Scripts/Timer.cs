@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 60f;
+    public float timeRemaining = 60f; 
     public bool timerIsRunning = false;
-
     public TMP_Text timerText;
+    public GameObject restartButton; // Reset Button
+    public GameObject mainMenuButton; // Main Menu Button
     void Start()
     {
         timerIsRunning = true;
+        restartButton.SetActive(false); // Hide Reset Button on Start
+        mainMenuButton.SetActive(false); // Hide Main Menu Button on Start
         
     }
 
@@ -30,6 +34,10 @@ public class Timer : MonoBehaviour
                 Debug.Log("Game Over");
                 timeRemaining = 0;
                 timerIsRunning=false;
+                DisplayTime(timeRemaining);
+
+                restartButton.SetActive(true); // Show Reset Button when timer ends
+                mainMenuButton.SetActive(true); // Show Main Menu Button when timer ends
             }
         }
         
@@ -43,5 +51,13 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void GotoMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
