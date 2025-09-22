@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     public GameObject mainMenuButton; // Main Menu Button
     void Start()
     {
-        timerIsRunning = true;
+        timerIsRunning = true; // Start Coundown
         restartButton.SetActive(false); // Hide Reset Button on Start
         mainMenuButton.SetActive(false); // Hide Main Menu Button on Start
         
@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime; // Counting Down
-                DisplayTime(timeRemaining);
+                DisplayTime(timeRemaining); // Updates the Timer Text
             }
             else
             {
