@@ -9,6 +9,8 @@ public class PlayerSpawner : MonoBehaviour
     public Sprite catSprite;
     public Sprite dogSprite;
 
+    public enum PlayerType { Cat, Dog }
+    public PlayerType playerType;
     private void Start()
     {
         string choice = PlayerPrefs.GetString("PlayerType", "Cat");
@@ -29,6 +31,21 @@ public class PlayerSpawner : MonoBehaviour
             playerInstance.GetComponent<SpriteRenderer>().sprite = dogSprite;
             Debug.Log("Spawned Dog Player prefab");
         }
+        CatchSystem catchSystem = playerInstance.GetComponentInParent<CatchSystem>();
+        if (catchSystem != null)
+        {
+            var scoreUI = GameObject.Find("ScoreText");
+                if (scoreUI != null)
+            {
+                catchSystem.scoreText = scoreUI.GetComponent<TMPro.TMP_Text>();
+            }
+            else
+            {
+                Debug.LogError("ScoreText TMP object not found in scene!");
+            }
+             
+        }
+
     }
 
   }

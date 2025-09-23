@@ -56,11 +56,11 @@ public class Timer : MonoBehaviour
     public void RestartGame()
     {
         Debug.Log("Restart button clicked!");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Sample Scene");
     }
     public void GotoMainMenu()
     {
         Debug.Log("Main Menu button clicked!");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Starting Screen + Carcter Select");
     }
 }
