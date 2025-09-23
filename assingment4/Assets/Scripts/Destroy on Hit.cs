@@ -6,7 +6,8 @@ public class DestroyonHit : MonoBehaviour
 { 
 private void OnTriggerEnter2D(Collider2D collision)
 {
-    if (collision.CompareTag("Player")) // Make sure player is tagged "Player"
+    if (collision.CompareTag("Ground"))
+
     {
         CatchSystem manager = FindObjectOfType<CatchSystem>();
         if (manager != null)
