@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2aa79d8ecbb98714b872b3c6f61698d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08e007d5d6ebb0848a1bf350b725cc6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerType: 0
-  catSprite: {fileID: 21300000, guid: 342ec4b27493404429fae513261bbbd3, type: 3}
-  dogSprite: {fileID: 21300000, guid: 2aa79d8ecbb98714b872b3c6f61698d1, type: 3}
+  catSprite: {fileID: 21300000, guid: cec31827f114f984088a35076c74206b, type: 3}
+  dogSprite: {fileID: 21300000, guid: 08e007d5d6ebb0848a1bf350b725cc6f, type: 3}
 --- !u!114 &-8555649953521665481
 MonoBehaviour:
   m_ObjectHideFlags: 0
