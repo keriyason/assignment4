@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CatchSystem : MonoBehaviour
 {
@@ -12,9 +13,13 @@ public class CatchSystem : MonoBehaviour
     private void Start()
     {
         string choice = PlayerPrefs.GetString("Player Type", "Cat");
-        activePlayerType = choice == "Cat" ? Player.PlayerType.Cat : Player.PlayerType.Dog;
 
-        UpdateScoreText();
+        if (choice == "Cat")
+            activePlayerType = Player.PlayerType.Cat;
+        else if (choice == "Dog")
+            activePlayerType = Player.PlayerType.Dog;
+
+            UpdateScoreText();
 
     }
 
@@ -39,7 +44,8 @@ public class CatchSystem : MonoBehaviour
         if (score >= winScore)
         {
             Debug.Log(activePlayerType + " wins!");
-            // TODO: trigger win screen
+            SceneManager.LoadScene(3);
+            
         }
     }
 
@@ -47,5 +53,6 @@ public class CatchSystem : MonoBehaviour
     {
         if (scoreText != null)
             scoreText.text = "Score: " + score;
+
     }
 }

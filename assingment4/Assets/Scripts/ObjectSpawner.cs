@@ -19,7 +19,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         GameObject prefabtoSpawn = Random.value > 0.5f ? catPrefab : dogPrefab;
 
-        float xPos = Random.Range(xRange, xRange);
+        float xPos = Random.Range(-xRange, xRange);
         Vector2 spawnPos = new Vector2(xPos, spawnHeight);
 
         Instantiate(prefabtoSpawn, spawnPos, Quaternion.identity) ;

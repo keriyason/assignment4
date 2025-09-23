@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FallingObject : MonoBehaviour
@@ -10,13 +11,19 @@ public class FallingObject : MonoBehaviour
         {
             CatchSystem manager = FindObjectOfType<CatchSystem>();
             if (manager != null)
-                manager.ObjectCaught(gameObject);
+            {
+                manager.ObjectCaught(gameObject); // Updates Score
+            }
         }
-        if (collision.CompareTag("Ground"))
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    { 
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            CatchSystem manager = FindObjectOfType<CatchSystem>();
-            if (manager != null)
-                manager.ObjectCaught(gameObject);
+            Debug.Log("Hit the ground! Destroying object.");
+
+            Destroy(gameObject);
         }
         
     }
