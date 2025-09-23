@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 6492502981741489489, guid: 29455ee9332e53543b4ffa3521bec72b, type: 3}
   spawnPoint: {fileID: 32320319}
-  catSprite: {fileID: 21300000, guid: cec31827f114f984088a35076c74206b, type: 3}
+  catSprite: {fileID: 21300000, guid: 86df5ab5acc005c4c94d23bb42965b7b, type: 3}
   dogSprite: {fileID: 21300000, guid: 08e007d5d6ebb0848a1bf350b725cc6f, type: 3}
   playerType: 0
 --- !u!50 &430908959
@@ -460,8 +460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5895615}
   m_AnchorMax: {x: 0, y: 0.5895615}
-  m_AnchoredPosition: {x: 8.064606, y: -0.84297943}
-  m_SizeDelta: {x: 18.73036, y: 9.4415}
+  m_AnchoredPosition: {x: 7.964905, y: -0.83869934}
+  m_SizeDelta: {x: 18.9055, y: 9.4501}
   m_Pivot: {x: 0.43056136, y: 0.5}
 --- !u!114 &482490467
 MonoBehaviour:
